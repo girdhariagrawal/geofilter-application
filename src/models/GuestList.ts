@@ -1,0 +1,3 @@
+interface GuestList {
+  guests: Guest[];
+}

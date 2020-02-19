@@ -1,0 +1,21 @@
+<form [formGroup]="filteringForm" (ngSubmit)="doFilter(filteringForm)">
+  <div class="form-group">
+    <input class="form-control" formControlName="latitude" placeholder="Center Latitude">
+    <div *ngIf="filteringForm.get('latitude').hasError('required')">
+      Latitude is required!
+    </div>
+  </div>
+  <div class="form-group">
+    <input class="form-control" formControlName="longitude" placeholder="Longitude">
+    <div *ngIf="filteringForm.get('longitude').hasError('required')">
+      Longitude is required!
+    </div>
+  </div>
+  <div class="form-group">
+    <input class="form-control" formControlName="range" placeholder="Distance">
+    <div *ngIf="filteringForm.get('range').hasError('required')">
+      Distance is required!
+    </div>
+  </div>
+  <button class="btn btn-primary w-100" type="submit">Filter</button>
+</form>

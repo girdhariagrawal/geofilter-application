@@ -1,0 +1,6 @@
+<div *ngFor="let guest of guestList" [class]="containerClass">
+  <app-guest-item [guest]="guest" [containerClass]="childContainerClass"></app-guest-item>
+</div>
+<div *ngIf="!guestList">
+  <span class="font-italic font-weight-bold">No Guest in list found!</span>
+</div>
