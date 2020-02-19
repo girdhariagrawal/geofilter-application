@@ -45,6 +45,8 @@ export class AppComponent {
    */
   fileChanged($event: any) {
     const guests = [];
+    this.guests = [];
+    this.filteredGuests = [];
     for (const line of $event.split(/[\r\n]+/)) {
       guests.push(JSON.parse(line));
     }
