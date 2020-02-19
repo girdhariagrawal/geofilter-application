@@ -13,6 +13,7 @@ export class FilterFormComponent implements OnInit {
   constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
+    // Form builder with default values
     this.filteringForm = this.fb.group({
       latitude: ['53.339428', Validators.required],
       longitude: ['-6.257664', Validators.required],

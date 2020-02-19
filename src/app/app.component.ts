@@ -2,7 +2,10 @@ import { Component } from '@angular/core';
 import { getDataWithInRange } from 'geofilter-girdhariagrawal';
 import GuestsMockData from '../mock-data/guests';
 import { UtilService } from '../services/util.service';
-
+enum Tabs {
+  PRE = 'PRE',
+  CUSTOM = 'CUSTOM',
+}
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -29,7 +32,7 @@ export class AppComponent {
   switchTab(tab: string) {
     this.activeList = tab;
     this.filteredGuests = [];
-    if (tab === 'CUSTOM') {
+    if (tab === Tabs.CUSTOM) {
       this.guests = [];
     }  else {
       this.guests = GuestsMockData.GUESTS;
